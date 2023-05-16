@@ -16,5 +16,22 @@ namespace CSharp_Inheritance
         {
             InitializeComponent();
         }
+
+        private void btmOneCycle_Click(object sender, EventArgs e)
+        {
+            COneCycle cOC = new COneCycle("외발 자전거");
+            lblName.Text = cOC.strName;
+
+            Graphics g = pMain.CreateGraphics();
+
+            Pen p = cOC.fPenInfo();
+            g.DrawRectangle(p, cOC._rcSquare1);
+            g.DrawEllipse(p, cOC._rcCircle1);
+
+
+            //Pen p = new Pen(Color.Aqua, 2);
+
+            //g.DrawRectangle(p, 50f, 50f, 100f, 150f);
+        }
     }
 }

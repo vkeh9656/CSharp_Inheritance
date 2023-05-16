@@ -64,6 +64,7 @@
             this.btmOneCycle.TabIndex = 1;
             this.btmOneCycle.Text = "1단계 : 외발 자전거";
             this.btmOneCycle.UseVisualStyleBackColor = true;
+            this.btmOneCycle.Click += new System.EventHandler(this.btmOneCycle_Click);
             // 
             // btnCycle
             // 
