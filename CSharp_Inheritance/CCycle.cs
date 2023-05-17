@@ -7,24 +7,27 @@ using System.Threading.Tasks;
 
 namespace CSharp_Inheritance
 {
-    class COneCycle : CBase
+    internal class CCycle : CBase
     {
         public Rectangle _rcCircle1;
+        public Rectangle _rcCircle2;
         public Rectangle _rcSquare1;
 
-        public COneCycle(string sName) 
+        public CCycle(string sName)
         {
             strName = sName;
-            _Pen = new Pen(Color.WhiteSmoke, 3);
+            _Pen = new Pen(Color.Black, 3);
 
-            _rcCircle1 = new Rectangle(120, 150, 120, 120);
-            _rcSquare1 = new Rectangle(150, 30, 60, 120);
+            _rcCircle1 = new Rectangle(30, 150, 120, 120);
+            _rcCircle2 = new Rectangle(210, 150, 120, 120);
+            _rcSquare1 = new Rectangle(60, 90, 240, 60);
         }
 
         public Pen fPenInfo()
         {
             return _Pen;
         }
+
 
 
         /// <summary>
@@ -34,6 +37,7 @@ namespace CSharp_Inheritance
         public void Move(int iMove)
         {
             Circle1Move(iMove);
+            Circle2Move(iMove);
             Square1Move(iMove);
         }
 
@@ -47,6 +51,13 @@ namespace CSharp_Inheritance
             Point point = _rcCircle1.Location;
             point.X += iMove;
             _rcCircle1.Location = point;
+        }
+
+        protected void Circle2Move(int iMove)
+        {
+            Point point = _rcCircle2.Location;
+            point.X += iMove;
+            _rcCircle2.Location = point;
         }
 
         protected void Square1Move(int iMove)

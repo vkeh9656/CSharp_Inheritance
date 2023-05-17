@@ -53,7 +53,7 @@
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(123, 28);
             this.lblName.TabIndex = 0;
-            this.lblName.Text = "외발 자전거";
+            this.lblName.Text = "-";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btmOneCycle
@@ -74,6 +74,7 @@
             this.btnCycle.TabIndex = 2;
             this.btnCycle.Text = "2단계 : 자전거";
             this.btnCycle.UseVisualStyleBackColor = true;
+            this.btnCycle.Click += new System.EventHandler(this.btnCycle_Click);
             // 
             // btnCar
             // 
@@ -83,6 +84,7 @@
             this.btnCar.TabIndex = 3;
             this.btnCar.Text = "3단계 : 자동차";
             this.btnCar.UseVisualStyleBackColor = true;
+            this.btnCar.Click += new System.EventHandler(this.btnCar_Click);
             // 
             // btnLeft
             // 
@@ -92,6 +94,7 @@
             this.btnLeft.TabIndex = 4;
             this.btnLeft.Text = "<--------";
             this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // btnRight
             // 
@@ -101,6 +104,7 @@
             this.btnRight.TabIndex = 5;
             this.btnRight.Text = "-------->";
             this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
             // Form1
             // 
@@ -116,6 +120,7 @@
             this.Controls.Add(this.pMain);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
