@@ -26,11 +26,9 @@ namespace CSharp_Inheritance
         /// 외부에서 호출 가능하도록 사용
         /// </summary>
         /// <param name="iMove"></param>
-        public void Move(int iMove)
+        public override void Move(int iMove)
         {
-            Circle1Move(iMove);
-            Circle2Move(iMove);
-            Square1Move(iMove);
+            base.Move(iMove);;
 
             Square2Move(iMove);
         }

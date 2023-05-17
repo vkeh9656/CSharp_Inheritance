@@ -26,12 +26,23 @@ namespace CSharp_Inheritance
             return _Pen;
         }
 
+        public Pen fPenInfo(Color color)
+        {
+            _Pen = new Pen(color);
+            return _Pen;
+        }
+
+        public Pen fPenInfo(Color color, int width)
+        {
+            _Pen = new Pen(color, width);
+            return _Pen;
+        }
 
         /// <summary>
         /// 외부에서 호출 가능하도록 사용
         /// </summary>
         /// <param name="iMove"></param>
-        public void Move(int iMove)
+        public virtual void Move(int iMove)
         {
             Circle1Move(iMove);
             Square1Move(iMove);
